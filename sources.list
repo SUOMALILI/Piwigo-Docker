@@ -1,0 +1,8 @@
+deb http://mirrors.sustech.edu.cn/debian/ bullseye main non-free contrib
+#deb-src https://mirrors.sustech.edu.cn/debian/ bullseye main non-free contrib
+
+deb http://mirrors.sustech.edu.cn/debian/ bullseye-updates main contrib non-free
+#deb-src https://mirrors.sustech.edu.cn/debian/ bullseye-updates main contrib non-free
+
+deb http://mirrors.sustech.edu.cn/debian-security/ bullseye-security main contrib non-free
+#deb-src https://mirrors.sustech.edu.cn/debian-security/ bullseye-security main contrib non-free
