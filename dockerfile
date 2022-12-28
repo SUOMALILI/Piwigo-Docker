@@ -5,10 +5,10 @@ ARG PIWIGO_RELEASE=2.10.2
 # PHP config
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" && \
     sed -i "s/max_execution_time = 30/max_execution_time = 300/" "$PHP_INI_DIR/php.ini" && \
-    sed -i "s/memory_limit = 256M/memory_limit = 1024M/" "$PHP_INI_DIR/php.ini" && \
+    sed -i "s/memory_limit = 128M/memory_limit = 512M/" "$PHP_INI_DIR/php.ini" && \
     sed -i "s/max_input_time = 60/max_input_time = 180/" "$PHP_INI_DIR/php.ini" && \
     sed -i "s/post_max_size = 8M/post_max_size = 100M/" "$PHP_INI_DIR/php.ini" && \
-    sed -i "s/upload_max_filesize = 2M/upload_max_filesize = 200M/" "$PHP_INI_DIR/php.ini" && \
+    sed -i "s/upload_max_filesize = 2M/upload_max_filesize = 100M/" "$PHP_INI_DIR/php.ini" && \
     sed -i "s/expose_php = On/expose_php = Off/" "$PHP_INI_DIR/php.ini"
 
 ADD sources.list /etc/apt/sources.list
@@ -22,6 +22,7 @@ RUN set ex && \
         mediainfo \
         ffmpeg \
         imagemagick \
+        libimage-exiftool-perl \
         libmagickwand-dev \
         unzip \
 # GD deps
