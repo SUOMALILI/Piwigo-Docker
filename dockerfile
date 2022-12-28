@@ -154,7 +154,7 @@ RUN sed -ri -e "s!PAGE_HEADER => 'jumbotron'!PAGE_HEADER => 'none'!g" ${APACHE_D
 # RUN chmod -R 755 ${APACHE_DOCUMENT_ROOT}/plugins && \
 #     chmod -R 755 ${APACHE_DOCUMENT_ROOT}/themes
 
-VOLUME ["${APACHE_DOCUMENT_ROOT}/_data", "${APACHE_DOCUMENT_ROOT}/local", "${APACHE_DOCUMENT_ROOT}/galleries", "${APACHE_DOCUMENT_ROOT}/upload"]
+VOLUME ["${APACHE_DOCUMENT_ROOT}/_data", "${APACHE_DOCUMENT_ROOT}/local", "${APACHE_DOCUMENT_ROOT}/galleries", "${APACHE_DOCUMENT_ROOT}/plugins","${APACHE_DOCUMENT_ROOT}/upload"]
 
 WORKDIR ${APACHE_DOCUMENT_ROOT}
 
