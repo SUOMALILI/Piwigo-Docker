@@ -2,7 +2,7 @@
 
 #### PIWIGO_RELEASE=2.10.2
 
-Base on the [jobec dockerfile](https://piwigo.org/forum/viewtopic.php?id=30502&p=2). I add videojs plugin and keep the plugin folder locked for security consideration. If you want to update piwigo and plugins, you can build your own image by `docker build piwigo `.
+Base on the [jobec dockerfile](https://piwigo.org/forum/viewtopic.php?id=30502&p=2). I add videojs plugin and keep the plugin folder. 
 
 #### Plugin List
 

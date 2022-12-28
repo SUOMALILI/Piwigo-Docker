@@ -151,8 +151,8 @@ RUN sed -ri -e "s!PAGE_HEADER => 'jumbotron'!PAGE_HEADER => 'none'!g" ${APACHE_D
     sed -ri -e "s!SOCIAL_ENABLED => true!SOCIAL_ENABLED => false!g" ${APACHE_DOCUMENT_ROOT}/themes/bootstrap_darkroom/include/config.php
 
 # Lock down theme and plugin dirs to prevent modification
-RUN chmod -R 755 ${APACHE_DOCUMENT_ROOT}/plugins && \
-    chmod -R 755 ${APACHE_DOCUMENT_ROOT}/themes
+# RUN chmod -R 755 ${APACHE_DOCUMENT_ROOT}/plugins && \
+#     chmod -R 755 ${APACHE_DOCUMENT_ROOT}/themes
 
 VOLUME ["${APACHE_DOCUMENT_ROOT}/_data", "${APACHE_DOCUMENT_ROOT}/local", "${APACHE_DOCUMENT_ROOT}/galleries", "${APACHE_DOCUMENT_ROOT}/upload"]
 
